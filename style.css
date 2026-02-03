@@ -1,0 +1,161 @@
+:root {
+  --color-primary: #822B33;
+  --color-accent: #AFDCFB;
+  --color-background: #FAFFEC;
+
+  --color-text: #822B33;
+
+  --h2-size: clamp(1.0rem, 1.15vw, 1.2rem);
+  --p-size: clamp(0.6rem, 0.9vw, 0.7rem);
+
+  --h2-p-gap: 0.3125rem;
+  --section-gap: 1.25rem;
+
+  --page-padding: 2rem;
+  --page-padding-left: clamp(2rem, 6vw, 4rem);
+
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-LightItalic.woff2") format("woff2");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+.site-header {
+  position: absolute;
+  top: var(--page-padding);
+  right: var(--page-padding);
+}
+
+.site-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-nav a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: var(--p-size);
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  font-style: italic;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%; 
+  margin: 0;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-background);  
+  color: var(--color-text);
+}
+
+main{
+  margin-top: auto;
+  width: 40%;
+  min-width: 27rem;
+  padding-top: var(--page-padding);
+  padding-bottom: var(--page-padding);
+  padding-right: var(--page-padding);
+  padding-left: var(--page-padding-left);
+
+}
+
+
+h2 {
+  font-size: var(--h2-size);
+  font-weight: 500;
+  margin: 0 0 var(--h2-p-gap) 0;
+}
+
+p, .role-title,
+.role-date,
+.org {
+  font-size: var(--p-size);
+  margin: 0;
+}
+
+section {
+  margin-bottom: var(--section-gap);
+}
+
+.mark-cycle {
+  position: relative;
+  width: 110px;
+  height: 90px;
+  display: block;
+  margin-bottom: 1.25rem; 
+}
+
+.mark-cycle img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.role-title{
+  font-weight: 700 ;
+}
+
+.role {
+  margin-bottom: 1rem;
+}
+
+.role-header {
+  display: flex;
+  align-items: baseline;
+}
+
+.role-title {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+}
+
+.role-title::after {
+  content: "";
+  flex: 1;
+  border-bottom: 0.125rem dotted currentColor;
+  margin: 0 0.75rem;
+}
+
+
+.role-date{
+  white-space: nowrap;
+}
+
+.org {
+  margin: 0.25rem 0 0;
+}
