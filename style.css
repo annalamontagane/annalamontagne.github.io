@@ -34,11 +34,12 @@
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("fonts/JetBrainsMono-LightItalic.woff2") format("woff2");
-  font-weight: 300;
+  src: url("fonts/JetBrainsMono-SemiBoldItalic.woff2") format("woff2");
+  font-weight: 900;
   font-style: italic;
   font-display: swap;
 }
+
 
 .site-header {
   position: absolute;
@@ -60,6 +61,20 @@
 .site-nav a:hover,
 .site-nav a:focus-visible {
   font-style: italic;
+  font-weight: 900;
+}
+
+.stack{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+}
+
+.arrow-row {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 html,
@@ -81,8 +96,7 @@ body {
 
 main{
   margin-top: auto;
-  width: 40%;
-  min-width: 27rem;
+  width: clamp(16rem, 50%, 27rem);
   padding-top: var(--page-padding);
   padding-bottom: var(--page-padding);
   padding-right: var(--page-padding);
@@ -158,4 +172,65 @@ section {
 
 .org {
   margin: 0.25rem 0 0;
+}
+
+.preview {
+  position: absolute;
+  right: var(--page-padding);
+  bottom: var(--page-padding);
+  width: 28vw;
+  max-width: 22rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.preview-images {
+  display: flex;
+  flex-direction: column;  
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.preview.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.preview p {
+  font-size: var(--p-size);
+}
+
+.role:hover ~ .preview,
+.role:focus-within ~ .preview {
+  opacity: 1;
+}
+
+@media (max-width: 740px) {
+  .preview { display: none; }
+
+  main{
+    width: clamp(16rem, 80%, 27rem);
+  }
+
+}
+
+@media (max-width: 600px) {
+  
+
+  :root {
+    --h2-size: 0.75rem;
+    --p-size: 0.55rem;
+
+    --page-padding: 1rem;
+    --page-padding-left: clamp(1rem, 6vw, 4rem);
+  }
+  
 }
