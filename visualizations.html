@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body class="page-viz">
 
 
     <header class="site-header">
@@ -39,9 +39,20 @@
 
     <main>
 
+        <h1>Visualizations</h1>
+
+    <div class="viz-grid">
+         <div class="viz-card">
+        
+        
+
         <div class="viz-intro">
-            <h2>Interactive SVG Visualization</h2>
-            <p>generating a random flower field.</p>
+            <h2>Interactive SVG Art</h2>
+            <p>
+                <a href="#" class="viz-trigger" id="vizTrigger">click me</a>
+                to generate & regenerate a random SVG flower garden
+            </p>
+            
         </div>
 
         <div class="viz-wrap">
@@ -50,10 +61,28 @@
                 <g id="vizFlowers"></g>
             </svg>
         </div>
+    </div>
 
-        <a href="#" class="viz-trigger" id="vizTrigger">click me</a>
+    <div class="viz-card">
 
+        <div class="viz-intro">
+          <h2>Courses → Skills & Tools</h2>
+          <p>how many university courses contribute to my skills & tools.</p>
+  
+          <div class="chart-controls">
+            <a href="#" class="viz-trigger is-active" id="btnSkills">skills</a>
+            <a href="#" class="viz-trigger" id="btnTools">tools</a>
+          </div>
+        </div>
+  
+        <div class="viz-wrap">
+          <svg id="barViz" viewBox="0 0 720 420" role="img"
+            aria-label="Bar chart of course counts by skill or tool"></svg>
+        </div>
+  
+      </div>  
 
+    </div>
     </main>
 
     <script src="vis.js"></script>
