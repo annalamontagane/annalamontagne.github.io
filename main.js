@@ -33,10 +33,24 @@ roles.forEach(role => {
     const images = role.dataset.images.split(",").map(src => src.trim());
 
     images.forEach(src => {
+        if (src.endsWith(".mov") || src.endsWith(".mp4")) {
+            const video = document.createElement("video");
+            video.src = src;
+            video.autoplay = true;
+            video.muted = true;
+            video.loop = true;
+            video.playsInline = true;
+            imagesContainer.appendChild(video);
+          } 
+
+          else {
+
       const img = document.createElement("img");
       img.src = src;
       img.alt = "";
       imagesContainer.appendChild(img);
+
+          }
     });
 
     previewText.textContent = role.dataset.text;
