@@ -4,8 +4,6 @@ const flowersLayer = document.getElementById("vizFlowers");
 const trigger = document.getElementById("vizTrigger");
 
 
-if (trigger && flowersLayer) {
-
 const css = getComputedStyle(document.documentElement);
 
 const COLOR_PRIMARY = css.getPropertyValue("--color-primary").trim();
@@ -87,6 +85,7 @@ function generateFlowers() {
   }
 }
 
+if (trigger && flowersLayer) {
 trigger.addEventListener("click", (e) => {
   e.preventDefault();
   generateFlowers();
