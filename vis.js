@@ -334,7 +334,7 @@ const skillsData = [
 // SHARED SETUP
 import vegaEmbed from "https://cdn.jsdelivr.net/npm/vega-embed@6/+esm"
 
-const raw = await fetch("/annalamontagne.github.io/assets/videoGames_wide.csv").then(r => r.text())
+const raw = await fetch("https://annalamontagane.github.io/annalamontagne.github.io/assets/videoGames_wide.csv").then(r => r.text())
 
 function parseCSV(raw) {
   const lines   = raw.trim().split("\n")
