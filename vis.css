@@ -1,0 +1,161 @@
+.viz-title {
+    font-size: var(--h2-size);
+    font-weight: 500;
+    margin: 0 0 0.3rem;
+  }
+  
+  .viz-subtitle {
+    font-size: var(--p-size);
+    margin: 0 0 1.75rem;
+    opacity: 0.6;
+  }
+  
+  #legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: 0.125rem dotted var(--color-text);
+    padding: 0.3rem 0.75rem;
+    cursor: pointer;
+    transition: border-style 0.2s, opacity 0.2s;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  
+  .legend-item:hover {
+    font-style: italic;
+    font-weight: 900;
+  }
+  
+  .legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  
+  .legend-label {
+    font-size: var(--p-size);
+    color: var(--color-text);
+  }
+  
+  #chart { width: 100%; }
+  #chart svg { width: 100% !important; height: auto !important; }
+  
+  .viz-divider {
+    border: none;
+    border-top: 0.125rem solid var(--color-text);
+    margin: 1.5rem 0;
+    opacity: 0.2;
+  }
+  
+  .toggle-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+  }
+  
+  #toggleWrapper {
+    width: 2.75rem;
+    height: 1.5rem;
+    border: 0.125rem dotted var(--color-text);
+    background: transparent;
+    cursor: pointer;
+    position: relative;
+    transition: background 0.25s;
+    flex-shrink: 0;
+  }
+  
+  #toggleWrapper.is-on { background: var(--color-text); }
+  
+  #toggleThumb {
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-text);
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+    transition: left 0.25s, background 0.25s;
+  }
+  
+  #toggleWrapper.is-on #toggleThumb {
+    left: calc(100% - 1rem - 2px);
+    background: var(--color-background);
+  }
+  
+  #toggleLabel {
+    font-size: var(--p-size);
+    opacity: 0.5;
+    transition: opacity 0.2s;
+    cursor: pointer;
+  }
+  
+  #toggleWrapper.is-on + #toggleLabel {
+    opacity: 1;
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  .viz-annotation {
+    font-size: var(--p-size);
+    color: var(--color-text);
+    opacity: 0.6;
+    line-height: 1.8;
+  }
+  
+  .viz-annotation strong {
+    opacity: 1;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  #slopeLegend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .viz-wrap + .viz-wrap {
+    margin-top: 10rem;
+  }
+
+  #jdLineChart,
+#jdBarChart,
+#jdLifespanChart,
+#dsSalesChart,
+#naSalesChart,
+#jpSalesChart,
+#slopeChart {
+  width: 100%;
+}
+
+#jdLineChart svg,
+#jdBarChart svg,
+#jdLifespanChart svg,
+#dsSalesChart svg,
+#naSalesChart svg,
+#jpSalesChart svg,
+#slopeChart svg {
+  width: 100% !important;
+  height: auto !important;
+}
+
+#platformTimeChart {
+    width: 100%;
+    min-height: 100%;
+  }
+  
+  #platformTimeChart svg {
+    width: 100% !important;
+    height: auto !important;
+  }

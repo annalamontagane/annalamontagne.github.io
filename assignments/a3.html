@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2 — Anna Lamontagne</title>
 
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../vis.css">
 </head>
 
 <body class="page-viz">
@@ -39,9 +40,104 @@
     </header>
 
     <main>
+        <div class="viz-wrap">
+            <div class="viz-intro">
+                <p class="viz-title" id="stackedTitle">Which genres generate the most global sales and which platforms drive them?</p>
+                <p class="viz-subtitle">Hover a platform in the legend to see its contribution across all genres</p>
+            </div>
+            <div id="legend"></div>
+            <div id="chart"></div>
+            <hr class="viz-divider">
+            <div class="toggle-row">
+                <div id="toggleWrapper">
+                    <div id="toggleThumb"></div>
+                </div>
+                <span id="toggleLabel">Show as percentage of genre</span>
+            </div>
+        </div>
+
+        <div class="viz-wrap">
+            <div class="viz-intro">
+              <p class="viz-title">Which genres grew or declined between the early and late 2000s and does it differ by platform? 
+            </p>
+              <p class="viz-subtitle">
+                Each line connects a genre's total sales in 2000–2004 (left) to 2005–2009 (right).
+                Hover a genre in the legend to isolate it.
+              </p>
+            </div>
+          
+            <div id="slopeLegend"></div>
+            <div id="slopeChart"></div>
+            <hr class="viz-divider">
+        </div>
+
+
+  
+  <!-- Platform sales over time -->
+<div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">Which platforms had the highest sales over time?</p>
+      <p class="viz-subtitle">Total global sales (M) per platform per year.</p>
+    </div>
+    <div id="platformTimeChart"></div>
+    <hr class="viz-divider">
+  </div>
+
+   <!-- NA Platform Sales treemap -->
+   <div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">Which platform leads North America sales?</p>
+      <p class="viz-subtitle">Rectangle size represents each platform's share of total NA sales</p>
+    </div>
+    <div id="naSalesChart"></div>
+    <hr class="viz-divider">
+  </div>
+  
+  <!-- Japan Platform Sales treemap -->
+  <div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">Which platform leads Japan sales?</p>
+      <p class="viz-subtitle">Rectangle size represents each platform's share of total Japan sales</p>
+    </div>
+    <div id="jpSalesChart"></div>
+    <hr class="viz-divider">
+  </div>
+  
+  <!--DS Sales by Region treemap -->
+<div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">Where did DS global sales come from?</p>
+      <p class="viz-subtitle">Rectangle size represents each region's share of total DS sales</p>
+    </div>
+    <div id="dsSalesChart"></div>
+    <hr class="viz-divider">
+  </div>
+  
+  
+  <!-- Just Dance — Wii line chart -->
+  <div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">Just Dance was a Wii game</p>
+      <p class="viz-subtitle">Global sales split between Wii and all other platforms. When the Wii era ended, no platform filled the gap.</p>
+    </div>
+    <div id="jdLineLegend"></div>
+    <div id="jdLineChart"></div>
+  </div>
+  
+  
+  <!--Just Dance -->
+  <div class="viz-wrap">
+    <div class="viz-intro">
+      <p class="viz-title">The unlikely chart-topper of 2011</p>
+      <p class="viz-subtitle">Total global sales across all platforms, 2011. Hover a genre in the legend to see which games made the top 10</p>
+    </div>
+    <div id="jdRegionLegend"></div>
+    <div id="jdRegionChart" style="width:100%;"></div>
+</div>
+
     </main>
 
-    <script src="/vis.js"></script>
+    <script type="module" src="../vis.js"></script>
 
 </body>
 
