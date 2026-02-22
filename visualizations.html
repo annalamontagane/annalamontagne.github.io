@@ -7,12 +7,15 @@
     <title>Visualizations — Anna Lamontagne</title>
 
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="vis.css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
 </head>
 
 <body class="iat355-page-background">
 
 
-    <header class="site-header">
+    <header class="site-header pixel-clear">
         <nav class="site-nav">
             <a href="index.html">home</a>
             <div class="stack">
@@ -44,15 +47,24 @@
     </header>
 
     <main>
-    <nav class="projects-nav">
-        <div class="projects-list">
-            <a href="./assignments/a2.html">assignment 1</a>
-            <a href="./assignments/a3.html">assignment 2</a>
+
+        
+        <div class="page-description pixel-clear">
+            <img src="../assets/star.svg" alt="" class="page-star" />
+            <p>This page acts as a home for my project work in  <a href="https://datadialogue.vercel.app/teaching/visualanalytics" target="_blank" rel="noopener">IAT 355</a> at Simon Fraser University. The course focused on designing and building interactive data visualizations using tools like HTML, CSS, JavaScript, D3, and Vega-Lite while learning how to critically analyze and communicate insights from data.</p>
         </div>
-    </nav>
+
+        <nav class="projects-nav pixel-clear">
+            <div class="projects-list">
+                <a href="./assignments/a2.html">assignment 1</a>
+                <a href="./assignments/a3.html">assignment 2</a>
+            </div>
+        </nav>
+
+
     </main>
     
-    <script src="vis.js"></script>
+    <script src="vis_background.js"></script>
 
 </body>
 

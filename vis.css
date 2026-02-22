@@ -159,3 +159,70 @@
     width: 100% !important;
     height: auto !important;
   }
+
+
+/* styles for visualizations.html */
+
+body {
+    cursor: none;
+}
+
+.site-header {
+    position: absolute;
+    z-index: 10;
+    display: inline-block;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+}
+
+.projects-nav {
+    position: fixed;
+    bottom: var(--page-padding);
+    left: var(--page-padding);
+    z-index: 10;
+}
+
+.page-description {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 30rem;
+    width: 60vw;
+}
+
+.page-star {
+    flex-shrink: 0;
+    width: 5rem;
+    min-width: 5rem;
+    max-width: 5rem;
+    height: auto;
+    display: block;
+    opacity: 0.9;
+}
+
+.page-description p {
+    font-size: var(--p-size);
+    line-height: 1.7;
+    margin: 0;
+    text-align: left;
+    font-weight: 900;
+}
+
+.page-description a {
+    color: var(--color-text);
+}
+
+.page-description a:hover {
+    font-style: italic;
+    font-weight: 900;
+}
+
+/* end of styles for visualizations.html */
