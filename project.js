@@ -3,7 +3,7 @@ const navLinks = document.querySelectorAll('.section-nav a');
 
 // Create an intersection observer
 const observerOptions = {
-  rootMargin: '-2rem 0rem -90% 0rem', // 2rem = 32px
+  rootMargin: '-32px 0px -90% 0px', 
   threshold: 0
 };
 
